@@ -4,8 +4,10 @@
   "description": "A tiniest blockchain implementation for a test assignment for Slate Studio",
   "main": "server.js",
   "scripts": {
+    "p": "prettier --write 'src/**/*.js'",
+    "p:w": "onchange 'src/**/*.js' -- prettier --write {{changed}}",
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc mocha"
   },
   "keywords": [
     "blockchain",
@@ -18,7 +20,21 @@
     "hapi-swagger": "^9.1.1",
     "inert": "^5.1.0",
     "joi": "^13.4.0",
-    "nodemon": "^1.18.2",
     "vision": "^5.3.3"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.2",
+    "nyc": "^12.0.2",
+    "onchange": "^4.0.0",
+    "prettier": "^1.13.7",
+    "standard": "^11.0.1"
   }
 }
