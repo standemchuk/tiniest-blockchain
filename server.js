@@ -9,8 +9,7 @@ const Pack = require('./package')
 const Routes = require('./routes')
 
 const init = async () => {
-  // eslint-disable-next-line new-cap
-  const server = await new Hapi.server({
+  const server = await new Hapi.Server({
     port: 3000,
     host: '0.0.0.0'
   })
@@ -31,14 +30,14 @@ const init = async () => {
     }
   ])
 
+  server.route(Routes)
+
   try {
     await server.start()
     console.log(`Server running at: ${server.info.uri}`)
   } catch (err) {
     console.log(err)
   }
-
-  server.route(Routes)
 }
 
 init()
