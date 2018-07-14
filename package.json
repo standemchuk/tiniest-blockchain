@@ -7,7 +7,7 @@
     "p": "prettier --write 'src/**/*.js'",
     "p:w": "onchange 'src/**/*.js' -- prettier --write {{changed}}",
     "start": "nodemon server.js",
-    "test": "nyc mocha"
+    "test": "standard && nyc mocha"
   },
   "keywords": [
     "blockchain",

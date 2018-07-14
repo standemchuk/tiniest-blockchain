@@ -1,11 +1,11 @@
-const Joi = require('joi');
+const Joi = require('joi')
 
 module.exports = [
   {
     method: 'POST',
     path: '/transaction',
     config: {
-      handler: (request) => {
+      handler: () => {
         return 'OK'
       },
       description: 'Submit a new transaction to the transaction queue',
@@ -19,4 +19,4 @@ module.exports = [
       }
     }
   }
-];
+]
