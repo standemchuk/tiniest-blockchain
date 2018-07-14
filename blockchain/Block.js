@@ -14,7 +14,7 @@ class Block {
   calculateHashOfBlock () {
     return crypto
       .createHash('sha256')
-      .update(this.index, this.timestamp, JSON.stringify(this.data), this.previousHash)
+      .update(this.index.toString(), this.timestamp.toString(), JSON.stringify(this.data), this.previousHash)
       .digest('hex')
   }
 
@@ -23,9 +23,19 @@ class Block {
       0,
       1531577901348,
       {
-        name: 'Genesis block'
+        name: 'Genesis block',
+        proofOfWork: 9
       },
       '-1'
+    )
+  }
+
+  static generateNextBlock (latestBlock, data) {
+    return new Block(
+      latestBlock.index + 1,
+      Date.now(),
+      data,
+      latestBlock.hash
     )
   }
 }

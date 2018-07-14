@@ -7,12 +7,16 @@ const HapiSwagger = require('hapi-swagger')
 const Pack = require('./package')
 
 const Routes = require('./routes')
+const Blockchain = require('./blockchain/Blockchain')
 
 const init = async () => {
   const server = await new Hapi.Server({
+    // TODO: CHANGE THESE TO ONES FROM process.env
     port: 3000,
     host: '0.0.0.0'
   })
+
+  server.app.bcInstance = new Blockchain()
 
   const swaggerOptions = {
     info: {
