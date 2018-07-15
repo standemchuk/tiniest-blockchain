@@ -5,7 +5,7 @@ const { createTransaction, getBlocks, mine } = require('./handlers')
 module.exports = [
   {
     method: 'POST',
-    path: '/transaction',
+    path: '/api/transaction',
     config: {
       handler: createTransaction,
       description: 'Submit a new transaction to the transaction queue',
@@ -21,7 +21,7 @@ module.exports = [
   },
   {
     method: 'GET',
-    path: '/blocks',
+    path: '/api/blocks',
     config: {
       handler: getBlocks,
       description: 'Get the list of blocks in the blockchain',
@@ -30,7 +30,7 @@ module.exports = [
   },
   {
     method: 'GET',
-    path: '/mine',
+    path: '/api/mine',
     config: {
       handler: mine,
       description: 'Mine a new block in the blockchain',

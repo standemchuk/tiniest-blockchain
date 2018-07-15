@@ -55,11 +55,10 @@ class Blockchain {
   async discoverPeerChains () {
     const peerChains = []
 
-    // TODO: CHANGE THIS TO READ FROM ENV
-    const peersList = []
+    const peersList = process.env.PEERS.split(',')
 
     for (let peerUrl of peersList) {
-      const peerChain = await axios.get(`${peerUrl}/blocks`)
+      const peerChain = await axios.get(`${peerUrl}/api/blocks`)
 
       peerChains.push(peerChain)
     }
