@@ -1,4 +1,7 @@
-const { expect } = require('chai')
+const axios = require('axios')
+const chai = require('chai')
+const { expect } = chai
+const sinon = require('sinon')
 
 const Blockchain = require('../../blockchain/Blockchain')
 
@@ -44,5 +47,40 @@ describe('Blockchain', () => {
     expect(chain.blockchain[1].data.transactions.length).to.equal(2)
     expect(chain.blockchain[1].data.transactions[0].from).to.equal('test1')
     expect(chain.blockchain[1].data.transactions[1].from).to.equal('network')
+  })
+
+  it('should discover all peers when calling discoverPeerChains', async () => {
+    process.env.PEERS = 'http://localhost:3001,http://localhost:3002'
+
+    const chain = new Blockchain()
+
+    const stub = sinon.stub(axios, 'get')
+      .resolves([{ index: 0, hash: '-1', data: { test: 'value' } }])
+
+    const result = await chain.discoverPeerChains()
+
+    sinon.assert.callCount(stub, 2)
+    expect(result).to.be.an('array')
+    expect(result.length).to.equal(2)
+    expect(result[0][0].hash).to.equal('-1')
+
+    stub.restore()
+  })
+
+  it('should pick the longest chain when reaching consensus', async () => {
+    process.env.PEERS = 'http://localhost:3001,http://localhost:3002'
+
+    const chain = new Blockchain()
+
+    const stub = sinon.stub(axios, 'get')
+      .resolves([{ index: 0, hash: '-1', data: { test: 'value' } }, { index: 0, hash: '-1', data: { proofOfWork: 18 } }])
+
+    await chain.consensus()
+
+    sinon.assert.callCount(stub, 2)
+
+    expect(chain.get()).to.be.an('array')
+    expect(chain.get().length).to.equal(2)
+    expect(chain.get()[1].data.proofOfWork).to.equal(18)
   })
 })

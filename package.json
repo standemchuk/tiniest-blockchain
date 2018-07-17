@@ -7,7 +7,7 @@
     "p": "prettier --write 'src/**/*.js'",
     "p:w": "onchange 'src/**/*.js' -- prettier --write {{changed}}",
     "start": "nodemon server.js",
-    "test": "standard && PEERS=http://localhost:3000,http://localhost:3001 nyc mocha --recursive"
+    "test": "standard && nyc mocha --recursive"
   },
   "keywords": [
     "blockchain",
