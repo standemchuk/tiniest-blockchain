@@ -23,7 +23,8 @@ class Blockchain {
     this.createTransaction({
       from: 'network',
       to: minerAddress,
-      amount: 1
+      amount: 1,
+      createdAt: Date.now()
     })
 
     const newBlock = Block.generateNextBlock(lastBlock, {
