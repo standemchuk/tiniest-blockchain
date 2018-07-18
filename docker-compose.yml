@@ -1,6 +1,13 @@
 version: '3'
 services:
-  web:
+  frontend:
+    build: ./frontend
+    ports:
+      - 4200:3000
+    volumes:
+      - ./frontend:/src
+      - /src/node_modules
+  backend:
     build: .
     ports:
       - 3000:3000
