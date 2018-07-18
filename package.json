@@ -44,7 +44,8 @@
     "globals": [
       "describe",
       "it",
-      "beforeEach"
+      "beforeEach",
+      "fetch"
     ]
   }
 }
