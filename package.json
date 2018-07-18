@@ -26,6 +26,7 @@
     "vision": "^5.3.3"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.6",
     "eslint-config-prettier": "^2.9.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.13.0",

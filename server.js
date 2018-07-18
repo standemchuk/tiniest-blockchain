@@ -11,9 +11,9 @@ const Blockchain = require('./blockchain/Blockchain')
 
 const init = async () => {
   const server = await new Hapi.Server({
-    // TODO: CHANGE THESE TO ONES FROM process.env
     port: 3000,
-    host: '0.0.0.0'
+    host: '0.0.0.0',
+    routes: { cors: true }
   })
 
   server.app.bcInstance = new Blockchain()

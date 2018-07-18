@@ -15,6 +15,7 @@
     "eject": "react-scripts eject"
   },
   "standard": {
+    "parser": "babel-eslint",
     "globals": [
       "describe",
       "it",
