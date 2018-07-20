@@ -6,12 +6,12 @@ import CardHeader from '@material-ui/core/CardHeader'
 import CardContent from '@material-ui/core/CardContent'
 import { withStyles } from '@material-ui/core/styles'
 
+import ErrorModal from '../components/ErrorModal'
+
 import GenericTable from '../components/GenericTable'
+import PageHeader from '../components/PageHeader'
 
 const styles = theme => ({
-  header: {
-    padding: theme.spacing.unit * 2
-  },
   card: {
     margin: theme.spacing.unit * 2
   }
@@ -21,29 +21,50 @@ export class TrackAccountBalance extends Component {
   state = {
     userId: '',
     accountBalance: 0,
-    userTransactions: []
+    userTransactions: [],
+    requestError: false
   }
 
   async componentDidMount () {
-    const userId = localStorage.getItem('userId')
-    const response = await fetch(`http://localhost:3000/api/balance/${userId}`)
-
-    const responseJson = await response.json()
-
-    this.setState({
-      userId,
-      accountBalance: responseJson.accountBalance,
-      userTransactions: responseJson.userTransactions
-    })
+    await this.getBalance()
   }
+
+  getBalance = async () => {
+    const userId = localStorage.getItem('userId')
+
+    try {
+      const response = await fetch(`http://localhost:3000/api/balance/${userId}`)
+
+      if (response && response.status === 200) {
+        const responseJson = await response.json()
+
+        this.setState({
+          userId,
+          accountBalance: responseJson.accountBalance,
+          userTransactions: responseJson.userTransactions
+        })
+      } else {
+        this.setState({ requestError: true })
+      }
+    } catch (err) {
+      this.setState({ requestError: true })
+    }
+  }
+
+  handleModalClose = () => {
+    this.setState({ requestError: false })
+  }
+
+  handleRetry = async () => {
+    this.getBalance()
+  }
+
   render () {
     const { classes } = this.props
 
     return (
       <Grid container>
-        <Grid item xs={12}>
-          <Typography className={classes.header} variant='display2' paragraph align={'center'}>Your account balance</Typography>
-        </Grid>
+        <PageHeader title='Your account Balance' />
         <Grid item xs={12} sm={5}>
           <Card className={classes.card}>
             <CardHeader title='Account info' />
@@ -64,6 +85,11 @@ export class TrackAccountBalance extends Component {
             </CardContent>
           </Card>
         </Grid>
+        <ErrorModal
+          open={this.state.requestError}
+          handleRetry={this.handleRetry}
+          handleModalClose={this.handleModalClose}
+        />
       </Grid>
     )
   }
