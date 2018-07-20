@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
-import logo from './logo.svg'
-import './App.css'
+import Grid from '@material-ui/core/Grid'
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 
 import TrackAccountBalance from './pages/TrackAccountBalance'
 import CreateTransactionPage from './pages/CreateTransactionPage'
 import ShowTransactionHistory from './pages/ShowTransactionHistory'
 
+import Header from './components/Header'
+
 import guid from './helpers/guid'
+
+const theme = createMuiTheme()
 
 class App extends Component {
   componentDidMount () {
@@ -18,15 +22,15 @@ class App extends Component {
   }
   render () {
     return (
-      <div className='App'>
-        <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <h1 className='App-title'>Welcome to tiniest blockchain app</h1>
-        </header>
-        <Route exact path='/' component={TrackAccountBalance} />
-        <Route path='/create-transaction' component={CreateTransactionPage} />
-        <Route path='/transaction-history' component={ShowTransactionHistory} />
-      </div>
+      <MuiThemeProvider theme={theme}>
+        <Header />
+        <Grid container spacing={16}>
+          <Route exact path='/' component={TrackAccountBalance} />
+          <Route path='/create-transaction' component={CreateTransactionPage} />
+          <Route path='/transaction-history' component={ShowTransactionHistory} />
+          {/* TODO: ADD 404 */}
+        </Grid>
+      </MuiThemeProvider>
     )
   }
 }

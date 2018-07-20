@@ -6,7 +6,6 @@ services:
       - 4200:3000
     volumes:
       - ./frontend:/src
-      - /src/node_modules
   backend:
     build: .
     ports:

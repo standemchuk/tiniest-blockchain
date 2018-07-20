@@ -16,7 +16,6 @@
   "author": "Stanislav Demchuk <standemchuk@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@material-ui/core": "^1.4.0",
     "axios": "^0.18.0",
     "chai": "^4.1.2",
     "hapi": "^17.5.2",
