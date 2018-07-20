@@ -7,7 +7,15 @@ import TrackAccountBalance from './pages/TrackAccountBalance'
 import CreateTransactionPage from './pages/CreateTransactionPage'
 import ShowTransactionHistory from './pages/ShowTransactionHistory'
 
+import guid from './helpers/guid'
+
 class App extends Component {
+  componentDidMount () {
+    const userId = localStorage.getItem('userId')
+    if (!userId) {
+      localStorage.setItem('userId', guid())
+    }
+  }
   render () {
     return (
       <div className='App'>

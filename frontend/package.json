@@ -20,7 +20,8 @@
       "describe",
       "it",
       "beforeEach",
-      "fetch"
+      "fetch",
+      "localStorage"
     ]
   }
 }
