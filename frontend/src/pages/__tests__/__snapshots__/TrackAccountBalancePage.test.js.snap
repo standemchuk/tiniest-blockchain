@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="MuiGrid-container-1"
+>
+  <div
+    className="MuiGrid-item-2 MuiGrid-grid-xs-12-40"
+  >
+    <p
+      className="MuiTypography-root-98 MuiTypography-display1-102 MuiTypography-paragraph-116 MuiTypography-alignCenter-111 Component-header-97"
+    >
+      Your account Balance
+    </p>
+  </div>
+  <div
+    className="MuiGrid-item-2 MuiGrid-grid-xs-12-40 MuiGrid-grid-sm-5-47"
+  >
+    <div
+      className="MuiPaper-root-123 MuiPaper-elevation1-126 MuiPaper-rounded-124 MuiCard-root-122 card"
+    >
+      <div
+        className="MuiCardHeader-root-150"
+      >
+        <div
+          className="MuiCardHeader-content-153"
+        >
+          <span
+            className="MuiTypography-root-98 MuiTypography-headline-103 MuiCardHeader-title-154"
+          >
+            Account info
+          </span>
+        </div>
+      </div>
+      <div
+        className="MuiCardContent-root-156"
+      >
+        <p
+          className="MuiTypography-root-98 MuiTypography-body1-107 MuiTypography-paragraph-116"
+        >
+          Your user id is: 
+          
+        </p>
+        <p
+          className="MuiTypography-root-98 MuiTypography-body1-107"
+        >
+          You have 
+          0
+           coins on your account
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiGrid-item-2 MuiGrid-grid-xs-12-40 MuiGrid-grid-sm-7-49"
+  >
+    <div
+      className="MuiPaper-root-123 MuiPaper-elevation1-126 MuiPaper-rounded-124 MuiCard-root-122 card"
+    >
+      <div
+        className="MuiCardHeader-root-150"
+      >
+        <div
+          className="MuiCardHeader-content-153"
+        >
+          <span
+            className="MuiTypography-root-98 MuiTypography-headline-103 MuiCardHeader-title-154"
+          >
+            Transactions list
+          </span>
+        </div>
+      </div>
+      <div
+        className="MuiCardContent-root-156"
+      >
+        <div
+          className="MuiGrid-container-1"
+        >
+          <div
+            className="MuiGrid-item-2 MuiGrid-grid-xs-12-40"
+          >
+            <h3
+              className="MuiTypography-root-98 MuiTypography-subheading-105"
+              style={
+                Object {
+                  "marginLeft": 30,
+                }
+              }
+            >
+              No data
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

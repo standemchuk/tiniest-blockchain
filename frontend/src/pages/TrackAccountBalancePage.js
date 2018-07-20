@@ -56,7 +56,7 @@ export class TrackAccountBalancePage extends Component {
   }
 
   handleRetry = async () => {
-    this.getBalance()
+    await this.getBalance()
   }
 
   render () {

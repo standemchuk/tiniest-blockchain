@@ -10,7 +10,7 @@ const styles = theme => ({
   }
 })
 
-const PageHeader = (props) => (
+export const PageHeader = (props) => (
   <Grid item xs={12}>
     <Typography
       className={props.classes.header}

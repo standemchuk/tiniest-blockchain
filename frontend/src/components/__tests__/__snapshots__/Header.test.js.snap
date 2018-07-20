@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<header
+  className="MuiPaper-root-9 MuiPaper-elevation4-15 MuiAppBar-root-1 MuiAppBar-positionStatic-5 MuiAppBar-colorDefault-6"
+>
+  <div
+    className="MuiToolbar-root-36 MuiToolbar-regular-38 MuiToolbar-gutters-37"
+  >
+    <a
+      className="MuiTypography-root-40 MuiTypography-title-46 MuiTypography-colorInherit-59 name"
+      href="/"
+      onClick={[Function]}
+      style={
+        Object {
+          "textDecoration": "none",
+        }
+      }
+    >
+      Tiniest Blockchain
+    </a>
+    <a
+      className="MuiButtonBase-root-88 MuiButton-root-64 MuiButton-text-66 MuiButton-flat-69 MuiButton-colorInherit-83"
+      href="/"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <span
+        className="MuiButton-label-65"
+      >
+        Account balance
+      </span>
+      <span
+        className="MuiTouchRipple-root-91"
+      />
+    </a>
+    <a
+      className="MuiButtonBase-root-88 MuiButton-root-64 MuiButton-text-66 MuiButton-flat-69 MuiButton-colorInherit-83"
+      href="/transaction-history"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <span
+        className="MuiButton-label-65"
+      >
+        Transaction history
+      </span>
+      <span
+        className="MuiTouchRipple-root-91"
+      />
+    </a>
+    <a
+      className="MuiButtonBase-root-88 MuiButton-root-64 MuiButton-text-66 MuiButton-textSecondary-68 MuiButton-flat-69 MuiButton-flatSecondary-71"
+      href="/create-transaction"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <span
+        className="MuiButton-label-65"
+      >
+        Create transaction
+      </span>
+      <span
+        className="MuiTouchRipple-root-91"
+      />
+    </a>
+  </div>
+</header>
+`;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="MuiGrid-item-2 MuiGrid-grid-xs-12-40"
+>
+  <p
+    className="MuiTypography-root-97 MuiTypography-display1-101 MuiTypography-paragraph-115 MuiTypography-alignCenter-110 header"
+  />
+</div>
+`;

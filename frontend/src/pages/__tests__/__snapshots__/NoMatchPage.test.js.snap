@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="MuiGrid-container-1"
+>
+  <div
+    className="MuiGrid-item-2 MuiGrid-grid-xs-12-40"
+  >
+    <h1
+      className="MuiTypography-root-97 MuiTypography-display4-98"
+      style={
+        Object {
+          "marginLeft": 15,
+        }
+      }
+    >
+      Not found
+    </h1>
+  </div>
+</div>
+`;

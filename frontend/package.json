@@ -12,17 +12,27 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject"
   },
   "standard": {
     "parser": "babel-eslint",
     "globals": [
+      "jest",
+      "expect",
       "describe",
       "it",
       "beforeEach",
+      "beforeAll",
       "fetch",
       "localStorage"
     ]
+  },
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest-fetch-mock": "^1.6.5",
+    "jest-localstorage-mock": "^2.2.0",
+    "react-test-renderer": "^16.4.1"
   }
 }

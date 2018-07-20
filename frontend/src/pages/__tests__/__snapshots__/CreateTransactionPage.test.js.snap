@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="MuiGrid-container-1 MuiGrid-spacing-xs-24-24"
+>
+  <div
+    className="MuiGrid-item-2 MuiGrid-grid-xs-12-40"
+  >
+    <p
+      className="MuiTypography-root-98 MuiTypography-display1-102 MuiTypography-paragraph-116 MuiTypography-alignCenter-111 Component-header-97"
+    >
+      Create a new transaction
+    </p>
+  </div>
+  <div
+    className="MuiGrid-item-2 MuiGrid-grid-xs-12-40 MuiGrid-grid-sm-6-48"
+  >
+    <div
+      className="MuiPaper-root-123 MuiPaper-elevation1-126 MuiPaper-rounded-124 MuiCard-root-122 card"
+    >
+      <div
+        className="MuiCardHeader-root-150"
+      >
+        <div
+          className="MuiCardHeader-content-153"
+        >
+          <span
+            className="MuiTypography-root-98 MuiTypography-headline-103 MuiCardHeader-title-154"
+          >
+            Please fill in the transaction info
+          </span>
+        </div>
+      </div>
+      <div
+        className="MuiCardContent-root-156"
+      >
+        <div
+          className="MuiGrid-item-2 MuiGrid-grid-xs-12-40"
+        >
+          <form
+            autoComplete="off"
+            className={undefined}
+            noValidate={true}
+            onSubmit={[Function]}
+          >
+            <div
+              className="MuiGrid-item-2 MuiGrid-grid-xs-12-40"
+            >
+              <div
+                aria-describedby={undefined}
+                className="MuiFormControl-root-157 MuiFormControl-marginNormal-158 MuiFormControl-fullWidth-160"
+              >
+                <label
+                  className="MuiFormLabel-root-166 MuiInputLabel-root-161 MuiInputLabel-formControl-162 MuiInputLabel-animated-165"
+                  data-shrink={false}
+                  htmlFor={undefined}
+                >
+                  Receiver ID
+                </label>
+                <div
+                  className="MuiInput-root-171 MuiInput-fullWidth-178 MuiInput-formControl-172 MuiInput-underline-175"
+                >
+                  <input
+                    aria-invalid={false}
+                    autoComplete={undefined}
+                    autoFocus={undefined}
+                    className="MuiInput-input-179"
+                    defaultValue={undefined}
+                    disabled={false}
+                    id={undefined}
+                    name="transactionReceiver"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={undefined}
+                    onKeyUp={undefined}
+                    placeholder="Alphanumeric"
+                    readOnly={undefined}
+                    required={undefined}
+                    rows={undefined}
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              className="MuiGrid-item-2 MuiGrid-grid-xs-12-40"
+            >
+              <div
+                aria-describedby={undefined}
+                className="MuiFormControl-root-157 MuiFormControl-marginNormal-158 MuiFormControl-fullWidth-160"
+              >
+                <label
+                  className="MuiFormLabel-root-166 MuiInputLabel-root-161 MuiInputLabel-formControl-162 MuiInputLabel-animated-165 MuiInputLabel-shrink-164"
+                  data-shrink={true}
+                  htmlFor={undefined}
+                >
+                  Amount
+                </label>
+                <div
+                  className="MuiInput-root-171 MuiInput-fullWidth-178 MuiInput-formControl-172 MuiInput-underline-175"
+                >
+                  <input
+                    aria-invalid={false}
+                    autoComplete={undefined}
+                    autoFocus={undefined}
+                    className="MuiInput-input-179"
+                    defaultValue={undefined}
+                    disabled={false}
+                    id={undefined}
+                    name="amount"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={undefined}
+                    onKeyUp={undefined}
+                    placeholder="Numeric"
+                    readOnly={undefined}
+                    required={undefined}
+                    rows={undefined}
+                    type="text"
+                    value={0}
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              className="MuiGrid-item-2 MuiGrid-grid-xs-12-40"
+            >
+              <button
+                className="MuiButtonBase-root-208 MuiButton-root-184 MuiButton-contained-193 MuiButton-containedPrimary-194 MuiButton-raised-196 MuiButton-raisedPrimary-197"
+                disabled={false}
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                tabIndex="0"
+                type="submit"
+              >
+                <span
+                  className="MuiButton-label-185"
+                >
+                  Submit
+                </span>
+                <span
+                  className="MuiTouchRipple-root-211"
+                />
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

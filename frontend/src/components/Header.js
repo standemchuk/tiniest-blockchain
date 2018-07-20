@@ -12,7 +12,7 @@ const styles = () => ({
   }
 })
 
-const Header = (props) => (
+export const Header = (props) => (
   <AppBar color='default' position='static'>
     <Toolbar>
       <Typography

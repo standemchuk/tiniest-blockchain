@@ -25,8 +25,8 @@ const styles = theme => ({
   }
 })
 
-const ErrorModal = (props) => (
-  <Modal open={props.open} onClose={props.handleModalClose} >
+export const ErrorModal = (props) => (
+  <Modal open={props.open} onClose={props.handleModalClose}>
     <div className={props.classes.modal}>
       <Typography
         variant='title'

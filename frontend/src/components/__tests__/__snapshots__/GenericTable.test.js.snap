@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<table
+  className="MuiTable-root-1"
+>
+  <thead
+    className="MuiTableHead-root-2"
+  >
+    <tr
+      className="MuiTableRow-root-3 MuiTableRow-head-6"
+    >
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-head-9"
+        scope="col"
+      >
+        Test 1
+      </th>
+      <th
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-head-9"
+        scope="col"
+      >
+        Test 2
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    className="MuiTableBody-root-16"
+  >
+    <tr
+      className="MuiTableRow-root-3"
+    >
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        1
+      </td>
+      <td
+        aria-sort={null}
+        className="MuiTableCell-root-8 MuiTableCell-body-10"
+        scope={undefined}
+      >
+        2
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

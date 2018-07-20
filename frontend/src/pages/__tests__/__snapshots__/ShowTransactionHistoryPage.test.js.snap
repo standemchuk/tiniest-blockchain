@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="MuiGrid-container-1"
+>
+  <div
+    className="MuiGrid-item-2 MuiGrid-grid-xs-12-40"
+  >
+    <p
+      className="MuiTypography-root-98 MuiTypography-display1-102 MuiTypography-paragraph-116 MuiTypography-alignCenter-111 Component-header-97"
+    >
+      Transaction history
+    </p>
+  </div>
+  <div
+    className="MuiGrid-item-2 MuiGrid-grid-xs-12-40"
+  >
+    <div
+      className="MuiGrid-container-1"
+    >
+      <div
+        className="MuiGrid-item-2 MuiGrid-grid-xs-12-40"
+      >
+        <h3
+          className="MuiTypography-root-98 MuiTypography-subheading-105"
+          style={
+            Object {
+              "marginLeft": 30,
+            }
+          }
+        >
+          No data
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
+`;
