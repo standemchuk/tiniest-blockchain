@@ -1,27 +1,16 @@
 import React, { Component } from 'react'
 
-import flattenArray from '../helpers/flattenArray'
-
 export default class ShowTransactionHistory extends Component {
   state = {
     transactions: []
   }
 
   async componentDidMount () {
-    const response = await fetch('http://localhost:3000/api/blocks')
+    const response = await fetch('http://localhost:3000/api/transactions')
 
     const responseJson = await response.json()
 
-    console.log(responseJson)
-
-    const transactions = flattenArray(
-      responseJson.blocks.map(block => block.data.transactions)
-        // specifically using != instead
-        // of !== to check for both null and undefined
-        .filter(blockTransactions => blockTransactions != null)
-    )
-
-    this.setState({ transactions })
+    this.setState({ transactions: responseJson.transactions })
   }
 
   render () {
