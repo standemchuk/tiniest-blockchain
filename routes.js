@@ -1,6 +1,6 @@
 const Joi = require('joi')
 
-const { createTransaction, getBlocks, mine } = require('./handlers')
+const { createTransaction, getBlocks, mine, getAccountBalance } = require('./handlers')
 
 module.exports = [
   {
@@ -35,6 +35,15 @@ module.exports = [
       handler: mine,
       description: 'Mine a new block in the blockchain',
       tags: ['api', 'blocks', 'mine']
+    }
+  },
+  {
+    method: 'GET',
+    path: '/api/balance/{userAddress}',
+    config: {
+      handler: getAccountBalance,
+      description: 'Get a balance for the account with address passed in param',
+      tags: ['api', 'balance']
     }
   }
 ]
