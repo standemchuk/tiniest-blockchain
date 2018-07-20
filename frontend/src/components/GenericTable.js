@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import Grid from '@material-ui/core/Grid'
 import Table from '@material-ui/core/Table'
 import TableBody from '@material-ui/core/TableBody'
 import TableCell from '@material-ui/core/TableCell'
@@ -11,7 +12,11 @@ export default class GenericTable extends PureComponent {
     const { data, headers } = this.props
     if (!data || !data.length) {
       return (
-        <Typography variant='subheading'>No data</Typography>
+        <Grid container>
+          <Grid item xs={12}>
+            <Typography style={{ marginLeft: 30 }} variant='subheading'>No data</Typography>
+          </Grid>
+        </Grid>
       )
     }
     return (

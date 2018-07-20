@@ -17,7 +17,7 @@ const styles = theme => ({
   }
 })
 
-export class TrackAccountBalance extends Component {
+export class TrackAccountBalancePage extends Component {
   state = {
     userId: '',
     accountBalance: 0,
@@ -95,4 +95,4 @@ export class TrackAccountBalance extends Component {
   }
 }
 
-export default withStyles(styles)(TrackAccountBalance)
+export default withStyles(styles)(TrackAccountBalancePage)

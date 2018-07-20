@@ -13,9 +13,16 @@ const styles = () => ({
 })
 
 const Header = (props) => (
-  <AppBar position='static'>
+  <AppBar color='default' position='static'>
     <Toolbar>
-      <Typography variant='title' color='inherit' className={props.classes.name}>
+      <Typography
+        style={{ textDecoration: 'none' }}
+        component={Link}
+        to={'/'}
+        variant='title'
+        color='inherit'
+        className={props.classes.name}
+      >
         Tiniest Blockchain
       </Typography>
       <Button component={Link} to='/' color='inherit'>Account balance</Button>

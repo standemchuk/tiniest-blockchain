@@ -9,6 +9,11 @@ module.exports = (request, h) => {
     ).filter(
       transaction => transaction != null
     )
+  transactions.forEach(
+    (transaction) => ({
+      ...transaction, createdAt: new Date(transaction.createdAt).toUTCString()
+    })
+  )
 
   const response = h.response({
     transactions

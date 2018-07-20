@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import Grid from '@material-ui/core/Grid'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 
-import TrackAccountBalance from './pages/TrackAccountBalance'
+import TrackAccountBalancePage from './pages/TrackAccountBalancePage'
 import CreateTransactionPage from './pages/CreateTransactionPage'
-import ShowTransactionHistory from './pages/ShowTransactionHistory'
+import ShowTransactionHistoryPage from './pages/ShowTransactionHistoryPage'
+import NoMatchPage from './pages/NoMatchPage'
 
 import Header from './components/Header'
 
@@ -25,10 +26,12 @@ class App extends Component {
       <MuiThemeProvider theme={theme}>
         <Header />
         <Grid container spacing={16}>
-          <Route exact path='/' component={TrackAccountBalance} />
-          <Route path='/create-transaction' component={CreateTransactionPage} />
-          <Route path='/transaction-history' component={ShowTransactionHistory} />
-          {/* TODO: ADD 404 */}
+          <Switch>
+            <Route exact path='/' component={TrackAccountBalancePage} />
+            <Route path='/create-transaction' component={CreateTransactionPage} />
+            <Route path='/transaction-history' component={ShowTransactionHistoryPage} />
+            <Route component={NoMatchPage} />
+          </Switch>
         </Grid>
       </MuiThemeProvider>
     )

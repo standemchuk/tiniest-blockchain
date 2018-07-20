@@ -5,7 +5,7 @@ import ErrorModal from '../components/ErrorModal'
 import GenericTable from '../components/GenericTable'
 import PageHeader from '../components/PageHeader'
 
-export default class ShowTransactionHistory extends Component {
+export default class ShowTransactionHistoryPage extends Component {
   state = {
     transactions: [],
     requestError: false

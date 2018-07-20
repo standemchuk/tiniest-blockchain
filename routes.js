@@ -39,11 +39,16 @@ module.exports = [
   },
   {
     method: 'GET',
-    path: '/api/mine',
+    path: '/api/mine/{address}',
     config: {
       handler: mine,
       description: 'Mine a new block in the blockchain',
-      tags: ['api', 'blocks', 'mine']
+      tags: ['api', 'blocks', 'mine'],
+      validate: {
+        params: {
+          address: Joi.string().required()
+        }
+      }
     }
   },
   {
