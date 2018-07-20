@@ -16,6 +16,9 @@ class Blockchain {
   }
 
   mineNewBlock (minerAddress) {
+    if (!this.transactions.length) {
+      return null
+    }
     const lastBlock = this.blockchain[this.blockchain.length - 1]
 
     const proof = this.proofOfWork(lastBlock.data.proofOfWork)

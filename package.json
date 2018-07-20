@@ -6,7 +6,7 @@
   "scripts": {
     "p": "prettier --write 'src/**/*.js'",
     "p:w": "onchange 'src/**/*.js' -- prettier --write {{changed}}",
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "test": "standard && nyc mocha --recursive"
   },
   "keywords": [
@@ -42,7 +42,9 @@
     "standard": "^11.0.1"
   },
   "standard": {
+    "parser": "babel-eslint",
     "globals": [
+      "localStorage",
       "describe",
       "it",
       "beforeEach",

@@ -49,6 +49,15 @@ describe('Blockchain', () => {
     expect(chain.blockchain[1].data.transactions[1].from).to.equal('network')
   })
 
+  it('should not mine a new block when there are no transactions in the queue', () => {
+    const chain = new Blockchain()
+
+    const result = chain.mineNewBlock('testMiner')
+
+    expect(result).to.equal(null)
+    expect(chain.blockchain.length).to.equal(1)
+  })
+
   it('should discover all peers when calling discoverPeerChains', async () => {
     process.env.PEERS = 'http://localhost:3001,http://localhost:3002'
 

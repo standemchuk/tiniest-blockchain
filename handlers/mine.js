@@ -3,10 +3,17 @@ module.exports = (request, h) => {
 
   const blockInfo = blockchain.mineNewBlock(request.params.address)
 
-  const response = h.response({
-    message: 'Block mined successfully',
+  const message =
+    blockInfo === null
+      ? 'Nothing to mine'
+      : 'Block mined successfully'
+
+  const responseObj = {
+    message,
     blockInfo
-  })
+  }
+
+  const response = h.response(responseObj)
   response.statusCode = 200
 
   return response

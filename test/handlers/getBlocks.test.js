@@ -3,7 +3,7 @@ const sinon = require('sinon')
 const { expect } = require('chai')
 
 describe('Get blocks endpoint', () => {
-  it('should call createTransaction() method on a blockchain instance', () => {
+  it('should call get() method on a blockchain instance', () => {
     const blocks = [{ test: 'value ' }]
     const requestObj = {
       server: {
